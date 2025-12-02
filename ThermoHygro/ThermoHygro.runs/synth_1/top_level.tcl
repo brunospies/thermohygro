@@ -4,7 +4,7 @@
 
 set TIME_start [clock seconds] 
 namespace eval ::optrace {
-  variable script "C:/Users/Bruno/Projects_VHDL/ThermoHygro/ThermoHygro.runs/synth_1/top_level.tcl"
+  variable script "C:/Users/Bruno/Documents/ENSEIRB/S7/Projet VHDL/thermohygro/thermohygro/thermohygro.runs/synth_1/top_level.tcl"
   variable category "vivado_synth"
 }
 
@@ -56,29 +56,31 @@ if {$::dispatch::connected} {
 }
 
 OPTRACE "synth_1" START { ROLLUP_AUTO }
-set_param chipscope.maxJobs 2
 set_param general.usePosixSpawnForFork 1
-set_param xicom.use_bs_reader 1
 OPTRACE "Creating in-memory project" START { }
 create_project -in_memory -part xc7a100tcsg324-1
 
 set_param project.singleFileAddWarning.threshold 0
 set_param project.compositeFile.enableAutoGeneration 0
 set_param synth.vivado.isSynthRun true
-set_property webtalk.parent_dir C:/Users/Bruno/Projects_VHDL/ThermoHygro/ThermoHygro.cache/wt [current_project]
-set_property parent.project_path C:/Users/Bruno/Projects_VHDL/ThermoHygro/ThermoHygro.xpr [current_project]
+set_property webtalk.parent_dir {C:/Users/Bruno/Documents/ENSEIRB/S7/Projet VHDL/thermohygro/thermohygro/thermohygro.cache/wt} [current_project]
+set_property parent.project_path {C:/Users/Bruno/Documents/ENSEIRB/S7/Projet VHDL/thermohygro/thermohygro/thermohygro.xpr} [current_project]
 set_property default_lib xil_defaultlib [current_project]
 set_property target_language Verilog [current_project]
-set_property ip_output_repo c:/Users/Bruno/Projects_VHDL/ThermoHygro/ThermoHygro.cache/ip [current_project]
+set_property ip_output_repo {c:/Users/Bruno/Documents/ENSEIRB/S7/Projet VHDL/thermohygro/thermohygro/thermohygro.cache/ip} [current_project]
 set_property ip_cache_permissions {read write} [current_project]
 OPTRACE "Creating in-memory project" END { }
 OPTRACE "Adding files" START { }
 read_vhdl -library xil_defaultlib {
-  {C:/Users/Bruno/Documents/ENSEIRB/S7/Projet VHDL/thermohygro/thermometre_hygrometre.srcs/sources_1/VHDL/Detec_impulsion.vhd}
-  C:/Users/Bruno/Projects_VHDL/ThermoHygro/ThermoHygro.srcs/sources_1/new/FSM_pixel.vhd
-  C:/Users/Bruno/Projects_VHDL/ThermoHygro/ThermoHygro.srcs/sources_1/new/ROM_display.vhd
-  {C:/Users/Bruno/Documents/ENSEIRB/S7/Projet VHDL/thermohygro/thermometre_hygrometre.srcs/sources_1/VHDL/pmodoledrgb_bitmap.vhd}
-  {C:/Users/Bruno/Documents/ENSEIRB/S7/Projet VHDL/thermohygro/thermometre_hygrometre.srcs/sources_1/VHDL/top_level.vhd}
+  {C:/Users/Bruno/Documents/ENSEIRB/S7/Projet VHDL/thermohygro/thermohygro/thermohygro.srcs/sources_1/new/FSM_pixel.vhd}
+  {C:/Users/Bruno/Documents/ENSEIRB/S7/Projet VHDL/thermohygro/thermohygro/thermohygro.srcs/sources_1/new/RAM_display.vhd}
+  {C:/Users/Bruno/Documents/ENSEIRB/S7/Projet VHDL/thermohygro/thermohygro/thermohygro.srcs/sources_1/new/ROM_CHAR.vhd}
+  {C:/Users/Bruno/Documents/ENSEIRB/S7/Projet VHDL/thermohygro/thermohygro/thermohygro.srcs/sources_1/new/Write_Control_Unit.vhd}
+  {C:/Users/Bruno/Documents/ENSEIRB/S7/Projet VHDL/thermohygro/thermohygro/thermohygro.srcs/sources_1/new/i2c_master.vhd}
+  {C:/Users/Bruno/Documents/ENSEIRB/S7/Projet VHDL/thermohygro/thermohygro/thermohygro.srcs/sources_1/new/pmod_hygro.vhd}
+  {C:/Users/Bruno/Documents/ENSEIRB/S7/Projet VHDL/thermohygro/thermohygro/thermohygro.srcs/sources_1/new/pmodoledrgb_bitmap.vhd}
+  {C:/Users/Bruno/Documents/ENSEIRB/S7/Projet VHDL/thermohygro/thermohygro/thermohygro.srcs/sources_1/new/top_pmod_hygro.vhd}
+  {C:/Users/Bruno/Documents/ENSEIRB/S7/Projet VHDL/thermohygro/thermohygro/thermohygro.srcs/sources_1/new/top_level.vhd}
 }
 OPTRACE "Adding files" END { }
 # Mark all dcp files as not used in implementation to prevent them from being
@@ -89,12 +91,10 @@ OPTRACE "Adding files" END { }
 foreach dcp [get_files -quiet -all -filter file_type=="Design\ Checkpoint"] {
   set_property used_in_implementation false $dcp
 }
-read_xdc {{C:/Users/Bruno/Documents/ENSEIRB/S7/Projet VHDL/thermohygro/thermometre_hygrometre.srcs/constrs_1/XDC/Nexys-4-DDR-Master.xdc}}
-set_property used_in_implementation false [get_files {{C:/Users/Bruno/Documents/ENSEIRB/S7/Projet VHDL/thermohygro/thermometre_hygrometre.srcs/constrs_1/XDC/Nexys-4-DDR-Master.xdc}}]
+read_xdc {{C:/Users/Bruno/Documents/ENSEIRB/S7/Projet VHDL/thermohygro/thermohygro/thermohygro.srcs/constrs_1/new/Nexys-4-DDR-Master.xdc}}
+set_property used_in_implementation false [get_files {{C:/Users/Bruno/Documents/ENSEIRB/S7/Projet VHDL/thermohygro/thermohygro/thermohygro.srcs/constrs_1/new/Nexys-4-DDR-Master.xdc}}]
 
 set_param ips.enableIPCacheLiteLoad 1
-
-read_checkpoint -auto_incremental -incremental C:/Users/Bruno/Projects_VHDL/ThermoHygro/ThermoHygro.srcs/utils_1/imports/synth_1/top_level.dcp
 close [open __synthesis_is_running__ w]
 
 OPTRACE "synth_design" START { }

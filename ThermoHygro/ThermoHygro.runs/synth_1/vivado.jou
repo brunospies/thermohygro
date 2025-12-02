@@ -3,12 +3,12 @@
 # SW Build 6140274 on Thu May 22 00:12:29 MDT 2025
 # IP Build 6138677 on Thu May 22 03:10:11 MDT 2025
 # SharedData Build 6139179 on Tue May 20 17:58:58 MDT 2025
-# Start of session at: Tue Nov  4 16:51:19 2025
-# Process ID         : 8096
-# Current directory  : C:/Users/Bruno/Projects_VHDL/ThermoHygro/ThermoHygro.runs/synth_1
+# Start of session at: Tue Dec  2 16:16:27 2025
+# Process ID         : 20384
+# Current directory  : C:/Users/Bruno/Documents/ENSEIRB/S7/Projet VHDL/thermohygro/thermohygro/thermohygro.runs/synth_1
 # Command line       : vivado.exe -log top_level.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source top_level.tcl
-# Log file           : C:/Users/Bruno/Projects_VHDL/ThermoHygro/ThermoHygro.runs/synth_1/top_level.vds
-# Journal file       : C:/Users/Bruno/Projects_VHDL/ThermoHygro/ThermoHygro.runs/synth_1\vivado.jou
+# Log file           : C:/Users/Bruno/Documents/ENSEIRB/S7/Projet VHDL/thermohygro/thermohygro/thermohygro.runs/synth_1/top_level.vds
+# Journal file       : C:/Users/Bruno/Documents/ENSEIRB/S7/Projet VHDL/thermohygro/thermohygro/thermohygro.runs/synth_1\vivado.jou
 # Running On         : DESKTOP-7DCFGKU
 # Platform           : Windows Server 2016 or Windows 10
 # Operating System   : 26100
@@ -17,8 +17,8 @@
 # CPU Physical cores : 4
 # CPU Logical cores  : 8
 # Host memory        : 16407 MB
-# Swap memory        : 3235 MB
-# Total Virtual      : 19642 MB
-# Available Virtual  : 2766 MB
+# Swap memory        : 3221 MB
+# Total Virtual      : 19628 MB
+# Available Virtual  : 3789 MB
 #-----------------------------------------------------------
 source top_level.tcl -notrace

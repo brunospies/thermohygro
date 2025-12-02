@@ -25,7 +25,7 @@ else
 fi
 export LD_LIBRARY_PATH
 
-HD_PWD='C:/Users/Bruno/Projects_VHDL/ThermoHygro/ThermoHygro.runs/synth_1'
+HD_PWD='C:/Users/Bruno/Documents/ENSEIRB/S7/Projet VHDL/thermohygro/thermohygro/thermohygro.runs/synth_1'
 cd "$HD_PWD"
 
 HD_LOG=runme.log

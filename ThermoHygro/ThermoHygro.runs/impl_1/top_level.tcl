@@ -1,5 +1,5 @@
 namespace eval ::optrace {
-  variable script "C:/Users/Bruno/Projects_VHDL/ThermoHygro/ThermoHygro.runs/impl_1/top_level.tcl"
+  variable script "C:/Users/Bruno/Documents/ENSEIRB/S7/Projet VHDL/thermohygro/thermohygro/thermohygro.runs/impl_1/top_level.tcl"
   variable category "vivado_impl"
 }
 
@@ -106,7 +106,6 @@ set rc [catch {
   create_msg_db init_design.pb
   set_param chipscope.maxJobs 2
   set_param general.usePosixSpawnForFork 1
-  set_param xicom.use_bs_reader 1
   set_param runs.launchOptions { -jobs 4  }
 OPTRACE "create in-memory project" START { }
   create_project -in_memory -part xc7a100tcsg324-1
@@ -114,15 +113,15 @@ OPTRACE "create in-memory project" START { }
   set_param project.singleFileAddWarning.threshold 0
 OPTRACE "create in-memory project" END { }
 OPTRACE "set parameters" START { }
-  set_property webtalk.parent_dir C:/Users/Bruno/Projects_VHDL/ThermoHygro/ThermoHygro.cache/wt [current_project]
-  set_property parent.project_path C:/Users/Bruno/Projects_VHDL/ThermoHygro/ThermoHygro.xpr [current_project]
-  set_property ip_output_repo C:/Users/Bruno/Projects_VHDL/ThermoHygro/ThermoHygro.cache/ip [current_project]
+  set_property webtalk.parent_dir {C:/Users/Bruno/Documents/ENSEIRB/S7/Projet VHDL/thermohygro/thermohygro/thermohygro.cache/wt} [current_project]
+  set_property parent.project_path {C:/Users/Bruno/Documents/ENSEIRB/S7/Projet VHDL/thermohygro/thermohygro/thermohygro.xpr} [current_project]
+  set_property ip_output_repo {{C:/Users/Bruno/Documents/ENSEIRB/S7/Projet VHDL/thermohygro/thermohygro/thermohygro.cache/ip}} [current_project]
   set_property ip_cache_permissions {read write} [current_project]
 OPTRACE "set parameters" END { }
 OPTRACE "add files" START { }
-  add_files -quiet C:/Users/Bruno/Projects_VHDL/ThermoHygro/ThermoHygro.runs/synth_1/top_level.dcp
+  add_files -quiet {{C:/Users/Bruno/Documents/ENSEIRB/S7/Projet VHDL/thermohygro/thermohygro/thermohygro.runs/synth_1/top_level.dcp}}
 OPTRACE "read constraints: implementation" START { }
-  read_xdc {{C:/Users/Bruno/Documents/ENSEIRB/S7/Projet VHDL/thermohygro/thermometre_hygrometre.srcs/constrs_1/XDC/Nexys-4-DDR-Master.xdc}}
+  read_xdc {{C:/Users/Bruno/Documents/ENSEIRB/S7/Projet VHDL/thermohygro/thermohygro/thermohygro.srcs/constrs_1/new/Nexys-4-DDR-Master.xdc}}
 OPTRACE "read constraints: implementation" END { }
 OPTRACE "read constraints: implementation_pre" START { }
 OPTRACE "read constraints: implementation_pre" END { }
