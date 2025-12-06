@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2025.1 (win64) Build 6140274 Thu May 22 00:12:29 MDT 2025
-| Date         : Tue Dec  2 16:22:52 2025
+| Date         : Sat Dec  6 13:12:17 2025
 | Host         : DESKTOP-7DCFGKU running 64-bit major release  (build 9200)
 | Command      : report_control_sets -verbose -file top_level_control_sets_placed.rpt
 | Design       : top_level
@@ -23,11 +23,11 @@ Table of Contents
 +----------------------------------------------------------+-------+
 |                          Status                          | Count |
 +----------------------------------------------------------+-------+
-| Total control sets                                       |    30 |
-|    Minimum number of control sets                        |    30 |
+| Total control sets                                       |    31 |
+|    Minimum number of control sets                        |    31 |
 |    Addition due to synthesis replication                 |     0 |
 |    Addition due to physical synthesis replication        |     0 |
-| Unused register locations in slices containing registers |   112 |
+| Unused register locations in slices containing registers |   105 |
 +----------------------------------------------------------+-------+
 * Control sets can be merged at opt_design using control_set_merge or merge_equivalent_drivers
 ** Run report_qor_suggestions for automated merging and remapping suggestions
@@ -39,12 +39,12 @@ Table of Contents
 +--------------------+-------+
 |       Fanout       | Count |
 +--------------------+-------+
-| Total control sets |    30 |
-| >= 0 to < 4        |     5 |
-| >= 4 to < 6        |     6 |
+| Total control sets |    31 |
+| >= 0 to < 4        |     7 |
+| >= 4 to < 6        |     3 |
 | >= 6 to < 8        |     4 |
-| >= 8 to < 10       |     5 |
-| >= 10 to < 12      |     0 |
+| >= 8 to < 10       |     6 |
+| >= 10 to < 12      |     1 |
 | >= 12 to < 14      |     2 |
 | >= 14 to < 16      |     1 |
 | >= 16              |     7 |
@@ -58,51 +58,52 @@ Table of Contents
 +--------------+-----------------------+------------------------+-----------------+--------------+
 | Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
 +--------------+-----------------------+------------------------+-----------------+--------------+
-| No           | No                    | No                     |              75 |           38 |
+| No           | No                    | No                     |             103 |           49 |
 | No           | No                    | Yes                    |              35 |           15 |
-| No           | Yes                   | No                     |              55 |           16 |
-| Yes          | No                    | No                     |              48 |           25 |
-| Yes          | No                    | Yes                    |              97 |           30 |
-| Yes          | Yes                   | No                     |             106 |           42 |
+| No           | Yes                   | No                     |              51 |           17 |
+| Yes          | No                    | No                     |              58 |           24 |
+| Yes          | No                    | Yes                    |              97 |           29 |
+| Yes          | Yes                   | No                     |             103 |           37 |
 +--------------+-----------------------+------------------------+-----------------+--------------+
 
 
 4. Detailed Control Set Information
 -----------------------------------
 
-+----------------+-----------------------------------------------------------+-----------------------------------------+------------------+----------------+--------------+
-|  Clock Signal  |                       Enable Signal                       |             Set/Reset Signal            | Slice Load Count | Bel Load Count | Bels / Slice |
-+----------------+-----------------------------------------------------------+-----------------------------------------+------------------+----------------+--------------+
-|  clk_IBUF_BUFG | ECRAN/PMOD_DC_i_2_n_0                                     | ECRAN/PMOD_DC_i_1_n_0                   |                1 |              1 |         1.00 |
-|  clk_IBUF_BUFG | ECRAN/PMOD_DC_i_2_n_0                                     | ECRAN/PMOD_VCCEN_i_1_n_0                |                1 |              1 |         1.00 |
-|  clk_IBUF_BUFG | ECRAN/PMOD_CS_i_1_n_0                                     | reset_IBUF                              |                1 |              1 |         1.00 |
-|  clk_IBUF_BUFG | ECRAN/PMOD_EN_i_1_n_0                                     | reset_IBUF                              |                1 |              1 |         1.00 |
-|  clk_IBUF_BUFG | ECRAN/PMOD_RES_i_2_n_0                                    | ECRAN/PMOD_RES_i_1_n_0                  |                1 |              1 |         1.00 |
-|  clk_IBUF_BUFG |                                                           | ECRAN/wait_cnt[22]_i_1_n_0              |                3 |              4 |         1.33 |
-|  clk_IBUF_BUFG |                                                           | ECRAN/wait_cnt[20]_i_1_n_0              |                1 |              4 |         4.00 |
-|  clk_IBUF_BUFG | WRITE_CONTROL_I/addr_display[12]_i_1_n_0                  | WRITE_CONTROL_I/addr_display[8]_i_1_n_0 |                3 |              4 |         1.33 |
-|  clk_IBUF_BUFG | ECRAN/spi_rem_bits[3]_i_1_n_0                             |                                         |                2 |              4 |         2.00 |
-|  clk_IBUF_BUFG | WRITE_CONTROL_I/NUMBER[3]_i_1_n_0                         |                                         |                4 |              4 |         1.00 |
-|  clk_IBUF_BUFG | ECRAN/OLED_FSM[4]_i_1_n_0                                 | reset_IBUF                              |                2 |              5 |         2.50 |
-|  clk_IBUF_BUFG | WRITE_CONTROL_I/count_aux[5]_i_2_n_0                      | WRITE_CONTROL_I/count_aux[5]_i_1_n_0    |                2 |              6 |         3.00 |
-|  clk_IBUF_BUFG | PMOD_HYGRO_I/aa/i2c_master_0/E[0]                         | reset_IBUF                              |                2 |              6 |         3.00 |
-|  clk_IBUF_BUFG | FSM_PIXEL_I/column11_out                                  | FSM_PIXEL_I/ADDR_REG                    |                2 |              6 |         3.00 |
-|  clk_IBUF_BUFG |                                                           | FSM_PIXEL_I/column[6]_i_1_n_0           |                1 |              7 |         7.00 |
-|  clk_IBUF_BUFG | PMOD_HYGRO_I/aa/i2c_master_0/data_rd[7]_i_1_n_0           | reset_IBUF                              |                3 |              8 |         2.67 |
-|  clk_IBUF_BUFG | PMOD_HYGRO_I/aa/i2c_master_0/FSM_onehot_state_reg[4]_0[0] |                                         |                3 |              8 |         2.67 |
-|  clk_IBUF_BUFG | PMOD_HYGRO_I/aa/i2c_master_0/busy_cnt_reg[1]_0[0]         |                                         |                3 |              8 |         2.67 |
-|  clk_IBUF_BUFG | WRITE_CONTROL_I/addr_display[12]_i_1_n_0                  |                                         |                5 |              9 |         1.80 |
-|  clk_IBUF_BUFG | PMOD_HYGRO_I/aa/i2c_master_0/busy1                        | reset_IBUF                              |                4 |              9 |         2.25 |
-|  clk_IBUF_BUFG |                                                           | FSM_PIXEL_I/ADDR_REG                    |                4 |             13 |         3.25 |
-|  clk_IBUF_BUFG | ECRAN/read_addr0                                          | ECRAN/read_addr[11]_i_1_n_0             |                5 |             13 |         2.60 |
-|  clk_IBUF_BUFG | ECRAN/spi_shift_reg[15]_i_1_n_0                           |                                         |                8 |             15 |         1.88 |
-|  clk_IBUF_BUFG | PMOD_HYGRO_I/aa/FSM_onehot_state_reg_n_0_[5]              | reset_IBUF                              |                7 |             19 |         2.71 |
-|  clk_IBUF_BUFG | PMOD_HYGRO_I/aa/pwr_up_cnt                                | reset_IBUF                              |                6 |             23 |         3.83 |
-|  clk_IBUF_BUFG |                                                           | WRITE_CONTROL_I/count[0]_i_1_n_0        |                7 |             27 |         3.86 |
-|  clk_IBUF_BUFG | PMOD_HYGRO_I/aa/pause_cnt                                 | reset_IBUF                              |                8 |             32 |         4.00 |
-|  clk_IBUF_BUFG |                                                           | reset_IBUF                              |               15 |             35 |         2.33 |
-|  clk_IBUF_BUFG | WRITE_CONTROL_I/flag_write_reg_n_0                        | WRITE_CONTROL_I/count_aux[5]_i_1_n_0    |               23 |             67 |         2.91 |
-|  clk_IBUF_BUFG |                                                           |                                         |               38 |             75 |         1.97 |
-+----------------+-----------------------------------------------------------+-----------------------------------------+------------------+----------------+--------------+
++----------------+-----------------------------------------------------------+-------------------------------------------+------------------+----------------+--------------+
+|  Clock Signal  |                       Enable Signal                       |              Set/Reset Signal             | Slice Load Count | Bel Load Count | Bels / Slice |
++----------------+-----------------------------------------------------------+-------------------------------------------+------------------+----------------+--------------+
+|  clk_IBUF_BUFG | LUMINOSITE/top_ALS/UUT/spi_ss_i_1_n_0                     | reset_IBUF                                |                1 |              1 |         1.00 |
+|  clk_IBUF_BUFG | ECRAN/PMOD_CS_i_1_n_0                                     | reset_IBUF                                |                1 |              1 |         1.00 |
+|  clk_IBUF_BUFG | ECRAN/PMOD_DC_i_2_n_0                                     | ECRAN/PMOD_DC_i_1_n_0                     |                1 |              1 |         1.00 |
+|  clk_IBUF_BUFG | ECRAN/PMOD_DC_i_2_n_0                                     | ECRAN/PMOD_VCCEN_i_1_n_0                  |                1 |              1 |         1.00 |
+|  clk_IBUF_BUFG | ECRAN/PMOD_EN_i_1_n_0                                     | reset_IBUF                                |                1 |              1 |         1.00 |
+|  clk_IBUF_BUFG | ECRAN/PMOD_RES_i_2_n_0                                    | ECRAN/PMOD_RES_i_1_n_0                    |                1 |              1 |         1.00 |
+|  clk_IBUF_BUFG | WRITE_CONTROL_I/addr_display[12]_i_1_n_0                  | WRITE_CONTROL_I/addr_display[8]_i_1_n_0   |                1 |              2 |         2.00 |
+|  clk_IBUF_BUFG |                                                           | ECRAN/wait_cnt[22]_i_1_n_0                |                3 |              4 |         1.33 |
+|  clk_IBUF_BUFG | LUMINOSITE/top_ALS/UUT/div_cnt[3]_i_2_n_0                 | LUMINOSITE/top_ALS/UUT/div_cnt[3]_i_1_n_0 |                2 |              4 |         2.00 |
+|  clk_IBUF_BUFG | ECRAN/OLED_FSM[4]_i_1_n_0                                 | reset_IBUF                                |                2 |              5 |         2.50 |
+|  clk_IBUF_BUFG | FSM_PIXEL_I/column11_out                                  | FSM_PIXEL_I/ADDR_REG                      |                1 |              6 |         6.00 |
+|  clk_IBUF_BUFG | PMOD_HYGRO_I/aa/i2c_master_0/E[0]                         | reset_IBUF                                |                2 |              6 |         3.00 |
+|  clk_IBUF_BUFG | WRITE_CONTROL_I/count_aux[5]_i_2_n_0                      | WRITE_CONTROL_I/count_aux[5]_i_1_n_0      |                2 |              6 |         3.00 |
+|  clk_IBUF_BUFG |                                                           | FSM_PIXEL_I/column[6]_i_1_n_0             |                3 |              7 |         2.33 |
+|  clk_IBUF_BUFG | LUMINOSITE/top_ALS/UUT/shift_reg0                         |                                           |                1 |              8 |         8.00 |
+|  clk_IBUF_BUFG | LUMINOSITE/top_ALS/UUT/E[0]                               |                                           |                2 |              8 |         4.00 |
+|  clk_IBUF_BUFG | PMOD_HYGRO_I/aa/i2c_master_0/data_rd[7]_i_1_n_0           | reset_IBUF                                |                2 |              8 |         4.00 |
+|  clk_IBUF_BUFG | PMOD_HYGRO_I/aa/i2c_master_0/FSM_onehot_state_reg[4]_0[0] |                                           |                4 |              8 |         2.00 |
+|  clk_IBUF_BUFG | PMOD_HYGRO_I/aa/i2c_master_0/busy_reg_2[0]                |                                           |                2 |              8 |         4.00 |
+|  clk_IBUF_BUFG | PMOD_HYGRO_I/aa/i2c_master_0/busy1                        | reset_IBUF                                |                4 |              9 |         2.25 |
+|  clk_IBUF_BUFG | WRITE_CONTROL_I/addr_display[12]_i_1_n_0                  |                                           |                7 |             11 |         1.57 |
+|  clk_IBUF_BUFG |                                                           | FSM_PIXEL_I/ADDR_REG                      |                4 |             13 |         3.25 |
+|  clk_IBUF_BUFG | ECRAN/read_addr0                                          | ECRAN/read_addr[11]_i_1_n_0               |                4 |             13 |         3.25 |
+|  clk_IBUF_BUFG | ECRAN/spi_shift_reg[15]_i_1_n_0                           |                                           |                8 |             15 |         1.88 |
+|  clk_IBUF_BUFG | PMOD_HYGRO_I/aa/FSM_onehot_state_reg_n_0_[5]              | reset_IBUF                                |                7 |             19 |         2.71 |
+|  clk_IBUF_BUFG | PMOD_HYGRO_I/aa/pwr_up_cnt                                | reset_IBUF                                |                6 |             23 |         3.83 |
+|  clk_IBUF_BUFG |                                                           | WRITE_CONTROL_I/count[0]_i_1_n_0          |                7 |             27 |         3.86 |
+|  clk_IBUF_BUFG | PMOD_HYGRO_I/aa/pause_cnt                                 | reset_IBUF                                |                8 |             32 |         4.00 |
+|  clk_IBUF_BUFG |                                                           | reset_IBUF                                |               15 |             35 |         2.33 |
+|  clk_IBUF_BUFG | WRITE_CONTROL_I/flag_write_reg_n_0                        | WRITE_CONTROL_I/count_aux[5]_i_1_n_0      |               19 |             61 |         3.21 |
+|  clk_IBUF_BUFG |                                                           |                                           |               49 |            103 |         2.10 |
++----------------+-----------------------------------------------------------+-------------------------------------------+------------------+----------------+--------------+
 
 

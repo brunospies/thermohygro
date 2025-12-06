@@ -8,41 +8,46 @@
   **** SW Build 6140274 on Thu May 22 00:12:29 MDT 2025
   **** IP Build 6138677 on Thu May 22 03:10:11 MDT 2025
   **** SharedData Build 6139179 on Tue May 20 17:58:58 MDT 2025
-  **** Start of session at: Tue Dec  2 16:16:27 2025
+  **** Start of session at: Sat Dec  6 13:05:55 2025
     ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
     ** Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
 
 source top_level.tcl -notrace
-create_project: Time (s): cpu = 00:00:09 ; elapsed = 00:00:06 . Memory (MB): peak = 491.410 ; gain = 211.281
+create_project: Time (s): cpu = 00:00:11 ; elapsed = 00:00:08 . Memory (MB): peak = 493.742 ; gain = 214.332
+Command: read_checkpoint -auto_incremental -incremental {C:/Users/Bruno/Documents/ENSEIRB/S7/Projet VHDL/thermohygro/thermohygro/thermohygro.srcs/utils_1/imports/synth_1/top_level.dcp}
+INFO: [Vivado 12-5825] Read reference checkpoint from C:/Users/Bruno/Documents/ENSEIRB/S7/Projet VHDL/thermohygro/thermohygro/thermohygro.srcs/utils_1/imports/synth_1/top_level.dcp for incremental synthesis
+INFO: [Vivado 12-7989] Please ensure there are no constraint changes
 Command: synth_design -top top_level -part xc7a100tcsg324-1
 Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7a100t'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a100t'
 INFO: [Device 21-403] Loading part xc7a100tcsg324-1
+INFO: [Designutils 20-5440] No compile time benefit to using incremental synthesis; A full resynthesis will be run
+INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
 INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
 INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
-INFO: [Synth 8-7075] Helper process launched with PID 17088
+INFO: [Synth 8-7075] Helper process launched with PID 20624
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:08 . Memory (MB): peak = 1187.996 ; gain = 492.719
+Starting RTL Elaboration : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 1195.082 ; gain = 493.977
 ---------------------------------------------------------------------------------
 WARNING: [Synth 8-10729] formal port 'ack_error' of mode 'buffer' cannot be associated with actual port 'i2c_ack_err' of mode 'out' [C:/Users/Bruno/Documents/ENSEIRB/S7/Projet VHDL/thermohygro/thermohygro/thermohygro.srcs/sources_1/new/pmod_hygro.vhd:84]
-INFO: [Synth 8-638] synthesizing module 'top_level' [C:/Users/Bruno/Documents/ENSEIRB/S7/Projet VHDL/thermohygro/thermohygro/thermohygro.srcs/sources_1/new/top_level.vhd:23]
-INFO: [Synth 8-3491] module 'FSM_pixel' declared at 'C:/Users/Bruno/Documents/ENSEIRB/S7/Projet VHDL/thermohygro/thermohygro/thermohygro.srcs/sources_1/new/FSM_pixel.vhd:6' bound to instance 'FSM_PIXEL_I' of component 'FSM_pixel' [C:/Users/Bruno/Documents/ENSEIRB/S7/Projet VHDL/thermohygro/thermohygro/thermohygro.srcs/sources_1/new/top_level.vhd:134]
+INFO: [Synth 8-638] synthesizing module 'top_level' [C:/Users/Bruno/Documents/ENSEIRB/S7/Projet VHDL/thermohygro/thermohygro/thermohygro.srcs/sources_1/new/top_level.vhd:35]
+INFO: [Synth 8-3491] module 'FSM_pixel' declared at 'C:/Users/Bruno/Documents/ENSEIRB/S7/Projet VHDL/thermohygro/thermohygro/thermohygro.srcs/sources_1/new/FSM_pixel.vhd:6' bound to instance 'FSM_PIXEL_I' of component 'FSM_pixel' [C:/Users/Bruno/Documents/ENSEIRB/S7/Projet VHDL/thermohygro/thermohygro/thermohygro.srcs/sources_1/new/top_level.vhd:156]
 INFO: [Synth 8-638] synthesizing module 'FSM_pixel' [C:/Users/Bruno/Documents/ENSEIRB/S7/Projet VHDL/thermohygro/thermohygro/thermohygro.srcs/sources_1/new/FSM_pixel.vhd:19]
 INFO: [Synth 8-256] done synthesizing module 'FSM_pixel' (0#1) [C:/Users/Bruno/Documents/ENSEIRB/S7/Projet VHDL/thermohygro/thermohygro/thermohygro.srcs/sources_1/new/FSM_pixel.vhd:19]
 	Parameter CLK_FREQ_HZ bound to: 100000000 - type: integer 
 	Parameter LEFT_SIDE bound to: 0 - type: bool 
-INFO: [Synth 8-3491] module 'PmodOLEDrgb_bitmap' declared at 'C:/Users/Bruno/Documents/ENSEIRB/S7/Projet VHDL/thermohygro/thermohygro/thermohygro.srcs/sources_1/new/pmodoledrgb_bitmap.vhd:50' bound to instance 'ECRAN' of component 'PmodOLEDrgb_bitmap' [C:/Users/Bruno/Documents/ENSEIRB/S7/Projet VHDL/thermohygro/thermohygro/thermohygro.srcs/sources_1/new/top_level.vhd:145]
+INFO: [Synth 8-3491] module 'PmodOLEDrgb_bitmap' declared at 'C:/Users/Bruno/Documents/ENSEIRB/S7/Projet VHDL/thermohygro/thermohygro/thermohygro.srcs/sources_1/new/pmodoledrgb_bitmap.vhd:50' bound to instance 'ECRAN' of component 'PmodOLEDrgb_bitmap' [C:/Users/Bruno/Documents/ENSEIRB/S7/Projet VHDL/thermohygro/thermohygro/thermohygro.srcs/sources_1/new/top_level.vhd:167]
 INFO: [Synth 8-638] synthesizing module 'PmodOLEDrgb_bitmap' [C:/Users/Bruno/Documents/ENSEIRB/S7/Projet VHDL/thermohygro/thermohygro/thermohygro.srcs/sources_1/new/pmodoledrgb_bitmap.vhd:73]
 	Parameter CLK_FREQ_HZ bound to: 100000000 - type: integer 
 	Parameter BPP bound to: 16 - type: integer 
 	Parameter GREYSCALE bound to: 0 - type: bool 
 	Parameter LEFT_SIDE bound to: 0 - type: bool 
 INFO: [Synth 8-256] done synthesizing module 'PmodOLEDrgb_bitmap' (0#1) [C:/Users/Bruno/Documents/ENSEIRB/S7/Projet VHDL/thermohygro/thermohygro/thermohygro.srcs/sources_1/new/pmodoledrgb_bitmap.vhd:73]
-INFO: [Synth 8-3491] module 'RAM_Display' declared at 'C:/Users/Bruno/Documents/ENSEIRB/S7/Projet VHDL/thermohygro/thermohygro/thermohygro.srcs/sources_1/new/RAM_display.vhd:5' bound to instance 'RAM_DISPLAY_I' of component 'RAM_Display' [C:/Users/Bruno/Documents/ENSEIRB/S7/Projet VHDL/thermohygro/thermohygro/thermohygro.srcs/sources_1/new/top_level.vhd:169]
+INFO: [Synth 8-3491] module 'RAM_Display' declared at 'C:/Users/Bruno/Documents/ENSEIRB/S7/Projet VHDL/thermohygro/thermohygro/thermohygro.srcs/sources_1/new/RAM_display.vhd:5' bound to instance 'RAM_DISPLAY_I' of component 'RAM_Display' [C:/Users/Bruno/Documents/ENSEIRB/S7/Projet VHDL/thermohygro/thermohygro/thermohygro.srcs/sources_1/new/top_level.vhd:191]
 INFO: [Synth 8-638] synthesizing module 'RAM_Display' [C:/Users/Bruno/Documents/ENSEIRB/S7/Projet VHDL/thermohygro/thermohygro/thermohygro.srcs/sources_1/new/RAM_display.vhd:16]
 INFO: [Synth 8-256] done synthesizing module 'RAM_Display' (0#1) [C:/Users/Bruno/Documents/ENSEIRB/S7/Projet VHDL/thermohygro/thermohygro/thermohygro.srcs/sources_1/new/RAM_display.vhd:16]
-INFO: [Synth 8-3491] module 'ROM_CHAR' declared at 'C:/Users/Bruno/Documents/ENSEIRB/S7/Projet VHDL/thermohygro/thermohygro/thermohygro.srcs/sources_1/new/ROM_CHAR.vhd:16' bound to instance 'ROM_CHAR_I' of component 'ROM_CHAR' [C:/Users/Bruno/Documents/ENSEIRB/S7/Projet VHDL/thermohygro/thermohygro/thermohygro.srcs/sources_1/new/top_level.vhd:180]
+INFO: [Synth 8-3491] module 'ROM_CHAR' declared at 'C:/Users/Bruno/Documents/ENSEIRB/S7/Projet VHDL/thermohygro/thermohygro/thermohygro.srcs/sources_1/new/ROM_CHAR.vhd:16' bound to instance 'ROM_CHAR_I' of component 'ROM_CHAR' [C:/Users/Bruno/Documents/ENSEIRB/S7/Projet VHDL/thermohygro/thermohygro/thermohygro.srcs/sources_1/new/top_level.vhd:202]
 INFO: [Synth 8-638] synthesizing module 'ROM_CHAR' [C:/Users/Bruno/Documents/ENSEIRB/S7/Projet VHDL/thermohygro/thermohygro/thermohygro.srcs/sources_1/new/ROM_CHAR.vhd:29]
 WARNING: [Synth 8-3514] cannot infer block ram on a non-memory variable 'memory_emoji'  [C:/Users/Bruno/Documents/ENSEIRB/S7/Projet VHDL/thermohygro/thermohygro/thermohygro.srcs/sources_1/new/ROM_CHAR.vhd:45]
 WARNING: [Synth 8-3514] cannot infer block ram on a non-memory variable 'memory_char'  [C:/Users/Bruno/Documents/ENSEIRB/S7/Projet VHDL/thermohygro/thermohygro/thermohygro.srcs/sources_1/new/ROM_CHAR.vhd:46]
@@ -148,10 +153,10 @@ WARNING: [Synth 8-7186] Applying attribute ram_style = "BLOCK" is ignored, objec
 WARNING: [Synth 8-7186] Applying attribute ram_style = "BLOCK" is ignored, object 'memory_emoji[0][99]' is not inferred as ram due to incorrect usage [C:/Users/Bruno/Documents/ENSEIRB/S7/Projet VHDL/thermohygro/thermohygro/thermohygro.srcs/sources_1/new/ROM_CHAR.vhd:34]
 INFO: [Common 17-14] Message 'Synth 8-7186' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 INFO: [Synth 8-256] done synthesizing module 'ROM_CHAR' (0#1) [C:/Users/Bruno/Documents/ENSEIRB/S7/Projet VHDL/thermohygro/thermohygro/thermohygro.srcs/sources_1/new/ROM_CHAR.vhd:29]
-INFO: [Synth 8-3491] module 'Write_Control_Unit' declared at 'C:/Users/Bruno/Documents/ENSEIRB/S7/Projet VHDL/thermohygro/thermohygro/thermohygro.srcs/sources_1/new/Write_Control_Unit.vhd:5' bound to instance 'WRITE_CONTROL_I' of component 'Write_Control_Unit' [C:/Users/Bruno/Documents/ENSEIRB/S7/Projet VHDL/thermohygro/thermohygro/thermohygro.srcs/sources_1/new/top_level.vhd:190]
+INFO: [Synth 8-3491] module 'Write_Control_Unit' declared at 'C:/Users/Bruno/Documents/ENSEIRB/S7/Projet VHDL/thermohygro/thermohygro/thermohygro.srcs/sources_1/new/Write_Control_Unit.vhd:5' bound to instance 'WRITE_CONTROL_I' of component 'Write_Control_Unit' [C:/Users/Bruno/Documents/ENSEIRB/S7/Projet VHDL/thermohygro/thermohygro/thermohygro.srcs/sources_1/new/top_level.vhd:212]
 INFO: [Synth 8-638] synthesizing module 'Write_Control_Unit' [C:/Users/Bruno/Documents/ENSEIRB/S7/Projet VHDL/thermohygro/thermohygro/thermohygro.srcs/sources_1/new/Write_Control_Unit.vhd:24]
 INFO: [Synth 8-256] done synthesizing module 'Write_Control_Unit' (0#1) [C:/Users/Bruno/Documents/ENSEIRB/S7/Projet VHDL/thermohygro/thermohygro/thermohygro.srcs/sources_1/new/Write_Control_Unit.vhd:24]
-INFO: [Synth 8-3491] module 'top_pmod_hygro' declared at 'C:/Users/Bruno/Documents/ENSEIRB/S7/Projet VHDL/thermohygro/thermohygro/thermohygro.srcs/sources_1/new/top_pmod_hygro.vhd:5' bound to instance 'PMOD_HYGRO_I' of component 'top_pmod_hygro' [C:/Users/Bruno/Documents/ENSEIRB/S7/Projet VHDL/thermohygro/thermohygro/thermohygro.srcs/sources_1/new/top_level.vhd:207]
+INFO: [Synth 8-3491] module 'top_pmod_hygro' declared at 'C:/Users/Bruno/Documents/ENSEIRB/S7/Projet VHDL/thermohygro/thermohygro/thermohygro.srcs/sources_1/new/top_pmod_hygro.vhd:5' bound to instance 'PMOD_HYGRO_I' of component 'top_pmod_hygro' [C:/Users/Bruno/Documents/ENSEIRB/S7/Projet VHDL/thermohygro/thermohygro/thermohygro.srcs/sources_1/new/top_level.vhd:229]
 INFO: [Synth 8-638] synthesizing module 'top_pmod_hygro' [C:/Users/Bruno/Documents/ENSEIRB/S7/Projet VHDL/thermohygro/thermohygro/thermohygro.srcs/sources_1/new/top_pmod_hygro.vhd:17]
 	Parameter sys_clk_freq bound to: 50000000 - type: integer 
 	Parameter humidity_resolution bound to: 8 - type: integer 
@@ -170,20 +175,48 @@ INFO: [Synth 8-638] synthesizing module 'i2c_master' [C:/Users/Bruno/Documents/E
 INFO: [Synth 8-256] done synthesizing module 'i2c_master' (0#1) [C:/Users/Bruno/Documents/ENSEIRB/S7/Projet VHDL/thermohygro/thermohygro/thermohygro.srcs/sources_1/new/i2c_master.vhd:54]
 INFO: [Synth 8-256] done synthesizing module 'pmod_hygrometer' (0#1) [C:/Users/Bruno/Documents/ENSEIRB/S7/Projet VHDL/thermohygro/thermohygro/thermohygro.srcs/sources_1/new/pmod_hygro.vhd:41]
 INFO: [Synth 8-256] done synthesizing module 'top_pmod_hygro' (0#1) [C:/Users/Bruno/Documents/ENSEIRB/S7/Projet VHDL/thermohygro/thermohygro/thermohygro.srcs/sources_1/new/top_pmod_hygro.vhd:17]
-INFO: [Synth 8-256] done synthesizing module 'top_level' (0#1) [C:/Users/Bruno/Documents/ENSEIRB/S7/Projet VHDL/thermohygro/thermohygro/thermohygro.srcs/sources_1/new/top_level.vhd:23]
+INFO: [Synth 8-3491] module 'top_luminosite' declared at 'C:/Users/Bruno/Documents/ENSEIRB/S7/Projet VHDL/thermohygro/thermohygro/thermohygro.srcs/sources_1/new/top_luminosite.vhd:4' bound to instance 'LUMINOSITE' of component 'top_luminosite' [C:/Users/Bruno/Documents/ENSEIRB/S7/Projet VHDL/thermohygro/thermohygro/thermohygro.srcs/sources_1/new/top_level.vhd:239]
+INFO: [Synth 8-638] synthesizing module 'top_luminosite' [C:/Users/Bruno/Documents/ENSEIRB/S7/Projet VHDL/thermohygro/thermohygro/thermohygro.srcs/sources_1/new/top_luminosite.vhd:13]
+INFO: [Synth 8-3491] module 'top_module_ALS' declared at 'C:/Users/Bruno/Documents/ENSEIRB/S7/Projet VHDL/thermohygro/thermohygro/thermohygro.srcs/sources_1/new/top_module_ALS.vhd:5' bound to instance 'top_ALS' of component 'top_module_ALS' [C:/Users/Bruno/Documents/ENSEIRB/S7/Projet VHDL/thermohygro/thermohygro/thermohygro.srcs/sources_1/new/top_luminosite.vhd:44]
+INFO: [Synth 8-638] synthesizing module 'top_module_ALS' [C:/Users/Bruno/Documents/ENSEIRB/S7/Projet VHDL/thermohygro/thermohygro/thermohygro.srcs/sources_1/new/top_module_ALS.vhd:16]
+INFO: [Synth 8-638] synthesizing module 'pmodals_ctrl' [C:/Users/Bruno/Documents/ENSEIRB/S7/Projet VHDL/thermohygro/thermohygro/thermohygro.srcs/sources_1/new/pmodals_ctrl.vhd:16]
+INFO: [Synth 8-256] done synthesizing module 'pmodals_ctrl' (0#1) [C:/Users/Bruno/Documents/ENSEIRB/S7/Projet VHDL/thermohygro/thermohygro/thermohygro.srcs/sources_1/new/pmodals_ctrl.vhd:16]
+INFO: [Synth 8-256] done synthesizing module 'top_module_ALS' (0#1) [C:/Users/Bruno/Documents/ENSEIRB/S7/Projet VHDL/thermohygro/thermohygro/thermohygro.srcs/sources_1/new/top_module_ALS.vhd:16]
+INFO: [Synth 8-3491] module 'gestion_LED' declared at 'C:/Users/Bruno/Documents/ENSEIRB/S7/Projet VHDL/thermohygro/thermohygro/thermohygro.srcs/sources_1/new/gestion_LED.vhd:5' bound to instance 'ge_led' of component 'gestion_LED' [C:/Users/Bruno/Documents/ENSEIRB/S7/Projet VHDL/thermohygro/thermohygro/thermohygro.srcs/sources_1/new/top_luminosite.vhd:45]
+INFO: [Synth 8-638] synthesizing module 'gestion_LED' [C:/Users/Bruno/Documents/ENSEIRB/S7/Projet VHDL/thermohygro/thermohygro/thermohygro.srcs/sources_1/new/gestion_LED.vhd:11]
+INFO: [Synth 8-256] done synthesizing module 'gestion_LED' (0#1) [C:/Users/Bruno/Documents/ENSEIRB/S7/Projet VHDL/thermohygro/thermohygro/thermohygro.srcs/sources_1/new/gestion_LED.vhd:11]
+INFO: [Synth 8-3491] module 'gestion_RGB' declared at 'C:/Users/Bruno/Documents/ENSEIRB/S7/Projet VHDL/thermohygro/thermohygro/thermohygro.srcs/sources_1/new/gestion_RGB.vhd:5' bound to instance 'ge_RGB' of component 'gestion_RGB' [C:/Users/Bruno/Documents/ENSEIRB/S7/Projet VHDL/thermohygro/thermohygro/thermohygro.srcs/sources_1/new/top_luminosite.vhd:46]
+INFO: [Synth 8-638] synthesizing module 'gestion_RGB' [C:/Users/Bruno/Documents/ENSEIRB/S7/Projet VHDL/thermohygro/thermohygro/thermohygro.srcs/sources_1/new/gestion_RGB.vhd:12]
+WARNING: [Synth 8-3514] cannot infer block ram on a non-memory variable 'rom_g'  [C:/Users/Bruno/Documents/ENSEIRB/S7/Projet VHDL/thermohygro/thermohygro/thermohygro.srcs/sources_1/new/gestion_RGB.vhd:27]
+WARNING: [Synth 8-3514] cannot infer block ram on a non-memory variable 'rom_r'  [C:/Users/Bruno/Documents/ENSEIRB/S7/Projet VHDL/thermohygro/thermohygro/thermohygro.srcs/sources_1/new/gestion_RGB.vhd:28]
+WARNING: [Synth 8-3514] cannot infer block ram on a non-memory variable 'rom_b'  [C:/Users/Bruno/Documents/ENSEIRB/S7/Projet VHDL/thermohygro/thermohygro/thermohygro.srcs/sources_1/new/gestion_RGB.vhd:29]
+INFO: [Synth 8-3491] module 'Pwm' declared at 'C:/Users/Bruno/Documents/ENSEIRB/S7/Projet VHDL/thermohygro/thermohygro/thermohygro.srcs/sources_1/new/Pwm.vhd:28' bound to instance 'pwm16_r' of component 'Pwm' [C:/Users/Bruno/Documents/ENSEIRB/S7/Projet VHDL/thermohygro/thermohygro/thermohygro.srcs/sources_1/new/gestion_RGB.vhd:37]
+INFO: [Synth 8-638] synthesizing module 'Pwm' [C:/Users/Bruno/Documents/ENSEIRB/S7/Projet VHDL/thermohygro/thermohygro/thermohygro.srcs/sources_1/new/Pwm.vhd:36]
+INFO: [Synth 8-256] done synthesizing module 'Pwm' (0#1) [C:/Users/Bruno/Documents/ENSEIRB/S7/Projet VHDL/thermohygro/thermohygro/thermohygro.srcs/sources_1/new/Pwm.vhd:36]
+INFO: [Synth 8-3491] module 'Pwm' declared at 'C:/Users/Bruno/Documents/ENSEIRB/S7/Projet VHDL/thermohygro/thermohygro/thermohygro.srcs/sources_1/new/Pwm.vhd:28' bound to instance 'pwm16_g' of component 'Pwm' [C:/Users/Bruno/Documents/ENSEIRB/S7/Projet VHDL/thermohygro/thermohygro/thermohygro.srcs/sources_1/new/gestion_RGB.vhd:38]
+INFO: [Synth 8-3491] module 'Pwm' declared at 'C:/Users/Bruno/Documents/ENSEIRB/S7/Projet VHDL/thermohygro/thermohygro/thermohygro.srcs/sources_1/new/Pwm.vhd:28' bound to instance 'pwm16_b' of component 'Pwm' [C:/Users/Bruno/Documents/ENSEIRB/S7/Projet VHDL/thermohygro/thermohygro/thermohygro.srcs/sources_1/new/gestion_RGB.vhd:39]
+INFO: [Synth 8-3491] module 'Pwm' declared at 'C:/Users/Bruno/Documents/ENSEIRB/S7/Projet VHDL/thermohygro/thermohygro/thermohygro.srcs/sources_1/new/Pwm.vhd:28' bound to instance 'pwm17_r' of component 'Pwm' [C:/Users/Bruno/Documents/ENSEIRB/S7/Projet VHDL/thermohygro/thermohygro/thermohygro.srcs/sources_1/new/gestion_RGB.vhd:42]
+INFO: [Synth 8-3491] module 'Pwm' declared at 'C:/Users/Bruno/Documents/ENSEIRB/S7/Projet VHDL/thermohygro/thermohygro/thermohygro.srcs/sources_1/new/Pwm.vhd:28' bound to instance 'pwm17_g' of component 'Pwm' [C:/Users/Bruno/Documents/ENSEIRB/S7/Projet VHDL/thermohygro/thermohygro/thermohygro.srcs/sources_1/new/gestion_RGB.vhd:43]
+INFO: [Synth 8-3491] module 'Pwm' declared at 'C:/Users/Bruno/Documents/ENSEIRB/S7/Projet VHDL/thermohygro/thermohygro/thermohygro.srcs/sources_1/new/Pwm.vhd:28' bound to instance 'pwm17_b' of component 'Pwm' [C:/Users/Bruno/Documents/ENSEIRB/S7/Projet VHDL/thermohygro/thermohygro/thermohygro.srcs/sources_1/new/gestion_RGB.vhd:44]
+WARNING: [Synth 8-614] signal 'rom_r' is read in the process but is not in the sensitivity list [C:/Users/Bruno/Documents/ENSEIRB/S7/Projet VHDL/thermohygro/thermohygro/thermohygro.srcs/sources_1/new/gestion_RGB.vhd:75]
+WARNING: [Synth 8-614] signal 'rom_g' is read in the process but is not in the sensitivity list [C:/Users/Bruno/Documents/ENSEIRB/S7/Projet VHDL/thermohygro/thermohygro/thermohygro.srcs/sources_1/new/gestion_RGB.vhd:75]
+WARNING: [Synth 8-614] signal 'rom_b' is read in the process but is not in the sensitivity list [C:/Users/Bruno/Documents/ENSEIRB/S7/Projet VHDL/thermohygro/thermohygro/thermohygro.srcs/sources_1/new/gestion_RGB.vhd:75]
+INFO: [Synth 8-256] done synthesizing module 'gestion_RGB' (0#1) [C:/Users/Bruno/Documents/ENSEIRB/S7/Projet VHDL/thermohygro/thermohygro/thermohygro.srcs/sources_1/new/gestion_RGB.vhd:12]
+INFO: [Synth 8-256] done synthesizing module 'top_luminosite' (0#1) [C:/Users/Bruno/Documents/ENSEIRB/S7/Projet VHDL/thermohygro/thermohygro/thermohygro.srcs/sources_1/new/top_luminosite.vhd:13]
+INFO: [Synth 8-256] done synthesizing module 'top_level' (0#1) [C:/Users/Bruno/Documents/ENSEIRB/S7/Projet VHDL/thermohygro/thermohygro/thermohygro.srcs/sources_1/new/top_level.vhd:35]
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:10 ; elapsed = 00:00:12 . Memory (MB): peak = 1361.008 ; gain = 665.730
+Finished RTL Elaboration : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 1370.527 ; gain = 669.422
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:10 ; elapsed = 00:00:13 . Memory (MB): peak = 1361.008 ; gain = 665.730
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:11 ; elapsed = 00:00:13 . Memory (MB): peak = 1370.527 ; gain = 669.422
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:10 ; elapsed = 00:00:13 . Memory (MB): peak = 1361.008 ; gain = 665.730
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:11 ; elapsed = 00:00:13 . Memory (MB): peak = 1370.527 ; gain = 669.422
 ---------------------------------------------------------------------------------
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.201 . Memory (MB): peak = 1361.008 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.222 . Memory (MB): peak = 1370.527 ; gain = 0.000
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
@@ -194,30 +227,33 @@ INFO: [Project 1-236] Implementation specific constraints were found while readi
 Resolution: To avoid this warning, move constraints listed in [.Xil/top_level_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1415.359 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1420.664 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.017 . Memory (MB): peak = 1415.359 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.012 . Memory (MB): peak = 1420.664 ; gain = 0.000
+INFO: [Designutils 20-5440] No compile time benefit to using incremental synthesis; A full resynthesis will be run
+INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:23 ; elapsed = 00:00:28 . Memory (MB): peak = 1415.359 ; gain = 720.082
+Finished Constraint Validation : Time (s): cpu = 00:00:24 ; elapsed = 00:00:26 . Memory (MB): peak = 1420.664 ; gain = 719.559
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7a100tcsg324-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:23 ; elapsed = 00:00:28 . Memory (MB): peak = 1415.359 ; gain = 720.082
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:24 ; elapsed = 00:00:26 . Memory (MB): peak = 1420.664 ; gain = 719.559
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:23 ; elapsed = 00:00:28 . Memory (MB): peak = 1415.359 ; gain = 720.082
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:24 ; elapsed = 00:00:26 . Memory (MB): peak = 1420.664 ; gain = 719.559
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-802] inferred FSM for state register 'current_state_reg' in module 'Write_Control_Unit'
 INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'i2c_master'
 INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'pmod_hygrometer'
+INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'pmodals_ctrl'
 ---------------------------------------------------------------------------------------------------
                    State |                     New Encoding |                Previous Encoding 
 ---------------------------------------------------------------------------------------------------
@@ -255,8 +291,20 @@ INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 
            output_result |                           100000 |                              101
 ---------------------------------------------------------------------------------------------------
 INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'one-hot' in module 'pmod_hygrometer'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                    idle |                              001 |                              000
+              release_ss |                              110 |                              001
+             first_dummy |                              101 |                              010
+               data_bits |                              100 |                              011
+              last_dummy |                              011 |                              100
+                   ss_up |                              010 |                              101
+                  fix_ss |                              000 |                              110
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'sequential' in module 'pmodals_ctrl'
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:01:50 ; elapsed = 00:01:57 . Memory (MB): peak = 1759.121 ; gain = 1063.844
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:01:55 ; elapsed = 00:01:59 . Memory (MB): peak = 1775.398 ; gain = 1074.293
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start RTL Component Statistics 
@@ -266,23 +314,24 @@ Detailed RTL Component Info :
 	   2 Input   31 Bit       Adders := 2     
 	   2 Input   24 Bit       Adders := 2     
 	   2 Input   13 Bit       Adders := 4     
+	   2 Input    8 Bit       Adders := 6     
 	   2 Input    7 Bit       Adders := 1     
 	   2 Input    6 Bit       Adders := 2     
-	   2 Input    4 Bit       Adders := 3     
-	   2 Input    3 Bit       Adders := 2     
+	   2 Input    4 Bit       Adders := 4     
+	   2 Input    3 Bit       Adders := 3     
 +---Registers : 
 	               24 Bit    Registers := 2     
 	               16 Bit    Registers := 7     
 	               13 Bit    Registers := 2     
 	               11 Bit    Registers := 1     
-	                8 Bit    Registers := 6     
+	                8 Bit    Registers := 14    
 	                7 Bit    Registers := 2     
 	                6 Bit    Registers := 2     
 	                5 Bit    Registers := 1     
-	                4 Bit    Registers := 2     
-	                3 Bit    Registers := 2     
+	                4 Bit    Registers := 3     
+	                3 Bit    Registers := 3     
 	                2 Bit    Registers := 1     
-	                1 Bit    Registers := 21    
+	                1 Bit    Registers := 23    
 +---RAMs : 
 	              96K Bit	(6144 X 16 bit)          RAMs := 2     
 +---Muxes : 
@@ -305,18 +354,19 @@ Detailed RTL Component Info :
 	   2 Input    6 Bit        Muxes := 1     
 	   6 Input    6 Bit        Muxes := 1     
 	   3 Input    4 Bit        Muxes := 1     
-	   2 Input    4 Bit        Muxes := 4     
+	   2 Input    4 Bit        Muxes := 6     
 	   5 Input    4 Bit        Muxes := 1     
 	   5 Input    3 Bit        Muxes := 1     
-	   2 Input    3 Bit        Muxes := 4     
+	   2 Input    3 Bit        Muxes := 6     
 	   4 Input    3 Bit        Muxes := 1     
-	   7 Input    3 Bit        Muxes := 1     
+	   7 Input    3 Bit        Muxes := 2     
 	   6 Input    3 Bit        Muxes := 1     
-	   2 Input    1 Bit        Muxes := 38    
-	   3 Input    1 Bit        Muxes := 2     
+	   2 Input    1 Bit        Muxes := 44    
+	   3 Input    1 Bit        Muxes := 3     
 	   6 Input    1 Bit        Muxes := 16    
 	   4 Input    1 Bit        Muxes := 9     
 	   9 Input    1 Bit        Muxes := 7     
+	   7 Input    1 Bit        Muxes := 1     
 ---------------------------------------------------------------------------------
 Finished RTL Component Statistics 
 ---------------------------------------------------------------------------------
@@ -335,11 +385,8 @@ Start Cross Boundary and Area Optimization
 WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
 DSP Report: Generating DSP TEMP_INT1, operation Mode is: A*(B:0x672).
 DSP Report: operator TEMP_INT1 is absorbed into DSP TEMP_INT1.
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin pix_write_reg with 1st driver pin 'FSM_PIXEL_I/pix_write_reg/Q' [C:/Users/Bruno/Documents/ENSEIRB/S7/Projet VHDL/thermohygro/thermohygro/thermohygro.srcs/sources_1/new/FSM_pixel.vhd:39]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin pix_write_reg with 2nd driver pin 'VCC' [C:/Users/Bruno/Documents/ENSEIRB/S7/Projet VHDL/thermohygro/thermohygro/thermohygro.srcs/sources_1/new/FSM_pixel.vhd:39]
-CRITICAL WARNING: [Synth 8-6858] multi-driven net pix_write_reg is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/Bruno/Documents/ENSEIRB/S7/Projet VHDL/thermohygro/thermohygro/thermohygro.srcs/sources_1/new/FSM_pixel.vhd:39]
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:03:51 ; elapsed = 00:04:02 . Memory (MB): peak = 2160.262 ; gain = 1464.984
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:04:00 ; elapsed = 00:04:07 . Memory (MB): peak = 2164.801 ; gain = 1463.695
 ---------------------------------------------------------------------------------
  Sort Area is  TEMP_INT1_0 : 0 0 : 318 318 : Used 1 time 0
 ---------------------------------------------------------------------------------
@@ -380,13 +427,13 @@ Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:04:00 ; elapsed = 00:04:12 . Memory (MB): peak = 2160.262 ; gain = 1464.984
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:04:10 ; elapsed = 00:04:17 . Memory (MB): peak = 2164.801 ; gain = 1463.695
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:04:06 ; elapsed = 00:04:17 . Memory (MB): peak = 2160.262 ; gain = 1464.984
+Finished Timing Optimization : Time (s): cpu = 00:04:15 ; elapsed = 00:04:22 . Memory (MB): peak = 2164.801 ; gain = 1463.695
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP, Shift Register and Retiming Reporting
@@ -411,7 +458,7 @@ INFO: [Synth 8-7052] The timing for the instance ECRAN/bitmap_reg_1 (implemented
 INFO: [Synth 8-7052] The timing for the instance ECRAN/bitmap_reg_2 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
 INFO: [Synth 8-7052] The timing for the instance ECRAN/bitmap_reg_3 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:04:07 ; elapsed = 00:04:19 . Memory (MB): peak = 2160.262 ; gain = 1464.984
+Finished Technology Mapping : Time (s): cpu = 00:04:18 ; elapsed = 00:04:25 . Memory (MB): peak = 2164.801 ; gain = 1463.695
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start IO Insertion
@@ -429,37 +476,37 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:04:15 ; elapsed = 00:04:27 . Memory (MB): peak = 2224.094 ; gain = 1528.816
+Finished IO Insertion : Time (s): cpu = 00:04:26 ; elapsed = 00:04:33 . Memory (MB): peak = 2256.203 ; gain = 1555.098
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:04:15 ; elapsed = 00:04:27 . Memory (MB): peak = 2224.094 ; gain = 1528.816
+Finished Renaming Generated Instances : Time (s): cpu = 00:04:26 ; elapsed = 00:04:33 . Memory (MB): peak = 2256.203 ; gain = 1555.098
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:04:15 ; elapsed = 00:04:28 . Memory (MB): peak = 2224.094 ; gain = 1528.816
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:04:27 ; elapsed = 00:04:34 . Memory (MB): peak = 2256.203 ; gain = 1555.098
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:04:15 ; elapsed = 00:04:28 . Memory (MB): peak = 2224.094 ; gain = 1528.816
+Finished Renaming Generated Ports : Time (s): cpu = 00:04:27 ; elapsed = 00:04:34 . Memory (MB): peak = 2256.203 ; gain = 1555.098
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:04:16 ; elapsed = 00:04:28 . Memory (MB): peak = 2227.090 ; gain = 1531.812
+Finished Handling Custom Attributes : Time (s): cpu = 00:04:27 ; elapsed = 00:04:34 . Memory (MB): peak = 2258.133 ; gain = 1557.027
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:04:16 ; elapsed = 00:04:28 . Memory (MB): peak = 2227.090 ; gain = 1531.812
+Finished Renaming Generated Nets : Time (s): cpu = 00:04:27 ; elapsed = 00:04:34 . Memory (MB): peak = 2258.133 ; gain = 1557.027
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -484,50 +531,48 @@ Report Cell Usage:
 |      |Cell     |Count |
 +------+---------+------+
 |1     |BUFG     |     1|
-|2     |CARRY4   |   252|
+|2     |CARRY4   |   256|
 |3     |DSP48E1  |     1|
-|4     |LUT1     |    74|
-|5     |LUT2     |   334|
-|6     |LUT3     |   232|
-|7     |LUT4     |   256|
-|8     |LUT5     |   456|
-|9     |LUT6     |  2152|
+|4     |LUT1     |    81|
+|5     |LUT2     |   272|
+|6     |LUT3     |   261|
+|7     |LUT4     |   269|
+|8     |LUT5     |   572|
+|9     |LUT6     |  2172|
 |10    |MUXF7    |   383|
 |11    |MUXF8    |   120|
 |12    |RAMB36E1 |     8|
 |17    |FDCE     |   125|
 |18    |FDPE     |     7|
-|19    |FDRE     |   266|
-|20    |FDSE     |     4|
-|21    |IBUF     |     2|
+|19    |FDRE     |   299|
+|20    |FDSE     |     9|
+|21    |IBUF     |     3|
 |22    |IOBUF    |     2|
-|23    |OBUF     |     7|
+|23    |OBUF     |    31|
 +------+---------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:04:16 ; elapsed = 00:04:28 . Memory (MB): peak = 2227.090 ; gain = 1531.812
+Finished Writing Synthesis Report : Time (s): cpu = 00:04:27 ; elapsed = 00:04:34 . Memory (MB): peak = 2258.133 ; gain = 1557.027
 ---------------------------------------------------------------------------------
-Synthesis finished with 0 errors, 3 critical warnings and 1 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:04:01 ; elapsed = 00:04:21 . Memory (MB): peak = 2227.090 ; gain = 1477.461
-Synthesis Optimization Complete : Time (s): cpu = 00:04:16 ; elapsed = 00:04:28 . Memory (MB): peak = 2227.090 ; gain = 1531.812
+Synthesis finished with 0 errors, 0 critical warnings and 1 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:04:12 ; elapsed = 00:04:29 . Memory (MB): peak = 2258.133 ; gain = 1506.891
+Synthesis Optimization Complete : Time (s): cpu = 00:04:28 ; elapsed = 00:04:35 . Memory (MB): peak = 2258.133 ; gain = 1557.027
 INFO: [Project 1-571] Translating synthesized netlist
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.036 . Memory (MB): peak = 2236.250 ; gain = 0.000
-INFO: [Netlist 29-17] Analyzing 766 Unisim elements for replacement
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.041 . Memory (MB): peak = 2267.332 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 770 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
-WARNING: [Netlist 29-101] Netlist 'top_level' is not ideal for floorplanning, since the cellview 'Write_Control_Unit' contains a large number of primitives.  Please consider enabling hierarchy in synthesis if you want to do floorplanning.
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 2239.973 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 2271.074 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
   A total of 2 instances were transformed.
   IOBUF => IOBUF (IBUF, OBUFT): 2 instances
 
-Synth Design complete | Checksum: aa3a5d88
+Synth Design complete | Checksum: 7a6a7a0e
 INFO: [Common 17-83] Releasing license: Synthesis
-52 Infos, 105 Warnings, 3 Critical Warnings and 0 Errors encountered.
+82 Infos, 110 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:04:21 ; elapsed = 00:04:52 . Memory (MB): peak = 2239.973 ; gain = 1748.562
-INFO: [runtcl-6] Synthesis results are not added to the cache due to CRITICAL_WARNING
-Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.016 . Memory (MB): peak = 2239.973 ; gain = 0.000
+synth_design: Time (s): cpu = 00:04:33 ; elapsed = 00:04:56 . Memory (MB): peak = 2271.074 ; gain = 1772.906
+Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.019 . Memory (MB): peak = 2271.074 ; gain = 0.000
 INFO: [Common 17-1381] The checkpoint 'C:/Users/Bruno/Documents/ENSEIRB/S7/Projet VHDL/thermohygro/thermohygro/thermohygro.runs/synth_1/top_level.dcp' has been generated.
 INFO: [Vivado 12-24828] Executing command : report_utilization -file top_level_utilization_synth.rpt -pb top_level_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Tue Dec  2 16:21:30 2025...
+INFO: [Common 17-206] Exiting Vivado at Sat Dec  6 13:11:03 2025...

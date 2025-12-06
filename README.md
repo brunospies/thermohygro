@@ -1,2 +1,23 @@
 # thermohygro
-This project implements an FPGA-based embedded system capable of measuring temperature and humidity from an environmental sensor, displaying the readings on an OLED screen, and transmitting the data to a remote server through an ESP Wi-Fi module.
+
+**FPGA project for Temperature, Humidity and Luminosity Mesurement**  
+_Academic Project – ENSEIRB-MATMECA BORDEAUX-INP_
+
+
+## Overview
+
+**ThermoHygro** is a FPGA project using a PMOD OLED Display, PMOD Hygro sensor and PMOD ALS sensor.  
+Its primary objective is to display the temperature and humidity and qualificate la quality of the air with one EMOJI:
+
+![Initial Display Configuration](Images/initial_display/initial_display.png)
+
+This project was developed as part of the **VHDL/FPGA Conception** course, under the supervision of **Prof. Christophe Iego**, at the **ENSEIRB-MATMECA BORDEAUX-INP**.
+
+---
+
+## Authors
+
+- **Bruno Spies**
+- **Charles Furnon**
+
+---

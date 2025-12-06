@@ -1,20 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="impl_1" LaunchPart="xc7a100tcsg324-1" LaunchTime="1764688585">
-  <File Type="ROUTE-BLACKBOX-DCP" Name="top_level_routed_bb.dcp"/>
-  <File Type="OPT-UTIL" Name="top_level_utilization_opted.rpt"/>
-  <File Type="ROUTE-PWR" Name="top_level_power_routed.rpt"/>
+<GenRun Id="impl_1" LaunchPart="xc7a100tcsg324-1" LaunchTime="1765022753">
   <File Type="PA-TCL" Name="top_level.tcl"/>
-  <File Type="OPT-METHODOLOGY-DRC" Name="top_level_methodology_drc_opted.rpt"/>
-  <File Type="INIT-TIMING" Name="top_level_timing_summary_init.rpt"/>
-  <File Type="ROUTE-PWR-SUM" Name="top_level_power_summary_routed.pb"/>
-  <File Type="OPT-RQA-PB" Name="top_level_rqa_opted.pb"/>
   <File Type="REPORTS-TCL" Name="top_level_reports.tcl"/>
-  <File Type="ROUTE-TIMING-PB" Name="top_level_timing_summary_routed.pb"/>
-  <File Type="OPT-UTIL-PB" Name="top_level_utilization_opted.pb"/>
+  <File Type="INIT-TIMING" Name="top_level_timing_summary_init.rpt"/>
   <File Type="OPT-DCP" Name="top_level_opt.dcp"/>
   <File Type="OPT-DRC" Name="top_level_drc_opted.rpt"/>
+  <File Type="OPT-UTIL" Name="top_level_utilization_opted.rpt"/>
+  <File Type="OPT-UTIL-PB" Name="top_level_utilization_opted.pb"/>
+  <File Type="OPT-METHODOLOGY-DRC" Name="top_level_methodology_drc_opted.rpt"/>
   <File Type="OPT-HWDEF" Name="top_level.hwdef"/>
   <File Type="OPT-TIMING" Name="top_level_timing_summary_opted.rpt"/>
+  <File Type="OPT-RQA-PB" Name="top_level_rqa_opted.pb"/>
   <File Type="PWROPT-DCP" Name="top_level_pwropt.dcp"/>
   <File Type="PWROPT-DRC" Name="top_level_drc_pwropted.rpt"/>
   <File Type="PWROPT-TIMING" Name="top_level_timing_summary_pwropted.rpt"/>
@@ -26,19 +22,17 @@
   <File Type="PLACE-CTRL" Name="top_level_control_sets_placed.rpt"/>
   <File Type="PLACE-SIMILARITY" Name="top_level_incremental_reuse_placed.rpt"/>
   <File Type="PLACE-PRE-SIMILARITY" Name="top_level_incremental_reuse_pre_placed.rpt"/>
-  <File Type="BG-BIN" Name="top_level.bin"/>
   <File Type="PLACE-TIMING" Name="top_level_timing_summary_placed.rpt"/>
-  <File Type="ROUTE-PWR-RPX" Name="top_level_power_routed.rpx"/>
   <File Type="PLACE-RQA-PB" Name="top_level_rqa_placed.pb"/>
   <File Type="POSTPLACE-PWROPT-DCP" Name="top_level_postplace_pwropt.dcp"/>
   <File Type="POSTPLACE-PWROPT-TIMING" Name="top_level_timing_summary_postplace_pwropted.rpt"/>
   <File Type="PHYSOPT-DCP" Name="top_level_physopt.dcp"/>
   <File Type="PHYSOPT-DRC" Name="top_level_drc_physopted.rpt"/>
   <File Type="PHYSOPT-TIMING" Name="top_level_timing_summary_physopted.rpt"/>
-  <File Type="ROUTE-UTIL" Name="top_level_utilization_routed.rpt"/>
   <File Type="ROUTE-ERROR-DCP" Name="top_level_routed_error.dcp"/>
   <File Type="ROUTE-DCP" Name="top_level_routed.dcp"/>
-  <File Type="ROUTE-TIMINGSUMMARY" Name="top_level_timing_summary_routed.rpt"/>
+  <File Type="ROUTE-BLACKBOX-DCP" Name="top_level_routed_bb.dcp"/>
+  <File Type="ROUTE-UTIL" Name="top_level_utilization_routed.rpt"/>
   <File Type="ROUTE-UTIL-PB" Name="top_level_utilization_routed.pb"/>
   <File Type="ROUTE-DRC" Name="top_level_drc_routed.rpt"/>
   <File Type="ROUTE-DRC-PB" Name="top_level_drc_routed.pb"/>
@@ -46,24 +40,30 @@
   <File Type="ROUTE-METHODOLOGY-DRC" Name="top_level_methodology_drc_routed.rpt"/>
   <File Type="ROUTE-METHODOLOGY-DRC-RPX" Name="top_level_methodology_drc_routed.rpx"/>
   <File Type="ROUTE-METHODOLOGY-DRC-PB" Name="top_level_methodology_drc_routed.pb"/>
-  <File Type="ROUTE-RQS-PB" Name="top_level_rqs_routed.pb"/>
+  <File Type="ROUTE-PWR" Name="top_level_power_routed.rpt"/>
+  <File Type="ROUTE-PWR-SUM" Name="top_level_power_summary_routed.pb"/>
+  <File Type="ROUTE-PWR-RPX" Name="top_level_power_routed.rpx"/>
   <File Type="ROUTE-STATUS" Name="top_level_route_status.rpt"/>
   <File Type="ROUTE-STATUS-PB" Name="top_level_route_status.pb"/>
+  <File Type="ROUTE-TIMINGSUMMARY" Name="top_level_timing_summary_routed.rpt"/>
+  <File Type="ROUTE-TIMING-PB" Name="top_level_timing_summary_routed.pb"/>
   <File Type="ROUTE-TIMING-RPX" Name="top_level_timing_summary_routed.rpx"/>
   <File Type="ROUTE-SIMILARITY" Name="top_level_incremental_reuse_routed.rpt"/>
   <File Type="ROUTE-CLK" Name="top_level_clock_utilization_routed.rpt"/>
   <File Type="ROUTE-BUS-SKEW" Name="top_level_bus_skew_routed.rpt"/>
   <File Type="ROUTE-BUS-SKEW-PB" Name="top_level_bus_skew_routed.pb"/>
   <File Type="ROUTE-BUS-SKEW-RPX" Name="top_level_bus_skew_routed.rpx"/>
+  <File Type="ROUTE-RQS-PB" Name="top_level_rqs_routed.pb"/>
   <File Type="POSTROUTE-PHYSOPT-DCP" Name="top_level_postroute_physopt.dcp"/>
   <File Type="POSTROUTE-PHYSOPT-BLACKBOX-DCP" Name="top_level_postroute_physopt_bb.dcp"/>
   <File Type="POSTROUTE-PHYSOPT-TIMING" Name="top_level_timing_summary_postroute_physopted.rpt"/>
   <File Type="POSTROUTE-PHYSOPT-TIMING-PB" Name="top_level_timing_summary_postroute_physopted.pb"/>
   <File Type="POSTROUTE-PHYSOPT-TIMING-RPX" Name="top_level_timing_summary_postroute_physopted.rpx"/>
   <File Type="POSTROUTE-PHYSOPT-BUS-SKEW" Name="top_level_bus_skew_postroute_physopted.rpt"/>
-  <File Type="BG-BIT" Name="top_level.bit"/>
   <File Type="POSTROUTE-PHYSOPT-BUS-SKEW-PB" Name="top_level_bus_skew_postroute_physopted.pb"/>
   <File Type="POSTROUTE-PHYSOPT-BUS-SKEW-RPX" Name="top_level_bus_skew_postroute_physopted.rpx"/>
+  <File Type="BG-BIT" Name="top_level.bit"/>
+  <File Type="BG-BIN" Name="top_level.bin"/>
   <File Type="BITSTR-MSK" Name="top_level.msk"/>
   <File Type="BITSTR-RBT" Name="top_level.rbt"/>
   <File Type="BITSTR-NKY" Name="top_level.nky"/>
@@ -119,6 +119,12 @@
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
+    <File Path="$PSRCDIR/sources_1/new/Pwm.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
     <File Path="$PSRCDIR/sources_1/new/RAM_display.vhd">
       <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
@@ -137,6 +143,18 @@
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
+    <File Path="$PSRCDIR/sources_1/new/gestion_LED.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/gestion_RGB.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
     <File Path="$PSRCDIR/sources_1/new/i2c_master.vhd">
       <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
@@ -149,7 +167,25 @@
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
+    <File Path="$PSRCDIR/sources_1/new/pmodals_ctrl.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
     <File Path="$PSRCDIR/sources_1/new/pmodoledrgb_bitmap.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/top_luminosite.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/top_module_ALS.vhd">
       <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="simulation"/>
@@ -187,14 +223,20 @@
   </FileSet>
   <FileSet Name="utils" Type="Utils" RelSrcDir="$PSRCDIR/utils_1" RelGenDir="$PGENDIR/utils_1">
     <Filter Type="Utils"/>
+    <File Path="$PSRCDIR/utils_1/imports/synth_1/top_level.dcp">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedInSteps" Val="synth_1"/>
+        <Attr Name="AutoDcp" Val="1"/>
+      </FileInfo>
+    </File>
     <Config>
       <Option Name="TopAutoSet" Val="TRUE"/>
     </Config>
   </FileSet>
   <Strategy Version="1" Minor="2">
-    <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2025">
-      <Desc>Default settings for Implementation.</Desc>
-    </StratHandle>
+    <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2025"/>
     <Step Id="init_design"/>
     <Step Id="opt_design"/>
     <Step Id="power_opt_design"/>

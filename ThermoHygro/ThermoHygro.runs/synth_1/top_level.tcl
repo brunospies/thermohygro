@@ -73,12 +73,18 @@ OPTRACE "Creating in-memory project" END { }
 OPTRACE "Adding files" START { }
 read_vhdl -library xil_defaultlib {
   {C:/Users/Bruno/Documents/ENSEIRB/S7/Projet VHDL/thermohygro/thermohygro/thermohygro.srcs/sources_1/new/FSM_pixel.vhd}
+  {C:/Users/Bruno/Documents/ENSEIRB/S7/Projet VHDL/thermohygro/thermohygro/thermohygro.srcs/sources_1/new/Pwm.vhd}
   {C:/Users/Bruno/Documents/ENSEIRB/S7/Projet VHDL/thermohygro/thermohygro/thermohygro.srcs/sources_1/new/RAM_display.vhd}
   {C:/Users/Bruno/Documents/ENSEIRB/S7/Projet VHDL/thermohygro/thermohygro/thermohygro.srcs/sources_1/new/ROM_CHAR.vhd}
   {C:/Users/Bruno/Documents/ENSEIRB/S7/Projet VHDL/thermohygro/thermohygro/thermohygro.srcs/sources_1/new/Write_Control_Unit.vhd}
+  {C:/Users/Bruno/Documents/ENSEIRB/S7/Projet VHDL/thermohygro/thermohygro/thermohygro.srcs/sources_1/new/gestion_LED.vhd}
+  {C:/Users/Bruno/Documents/ENSEIRB/S7/Projet VHDL/thermohygro/thermohygro/thermohygro.srcs/sources_1/new/gestion_RGB.vhd}
   {C:/Users/Bruno/Documents/ENSEIRB/S7/Projet VHDL/thermohygro/thermohygro/thermohygro.srcs/sources_1/new/i2c_master.vhd}
   {C:/Users/Bruno/Documents/ENSEIRB/S7/Projet VHDL/thermohygro/thermohygro/thermohygro.srcs/sources_1/new/pmod_hygro.vhd}
+  {C:/Users/Bruno/Documents/ENSEIRB/S7/Projet VHDL/thermohygro/thermohygro/thermohygro.srcs/sources_1/new/pmodals_ctrl.vhd}
   {C:/Users/Bruno/Documents/ENSEIRB/S7/Projet VHDL/thermohygro/thermohygro/thermohygro.srcs/sources_1/new/pmodoledrgb_bitmap.vhd}
+  {C:/Users/Bruno/Documents/ENSEIRB/S7/Projet VHDL/thermohygro/thermohygro/thermohygro.srcs/sources_1/new/top_luminosite.vhd}
+  {C:/Users/Bruno/Documents/ENSEIRB/S7/Projet VHDL/thermohygro/thermohygro/thermohygro.srcs/sources_1/new/top_module_ALS.vhd}
   {C:/Users/Bruno/Documents/ENSEIRB/S7/Projet VHDL/thermohygro/thermohygro/thermohygro.srcs/sources_1/new/top_pmod_hygro.vhd}
   {C:/Users/Bruno/Documents/ENSEIRB/S7/Projet VHDL/thermohygro/thermohygro/thermohygro.srcs/sources_1/new/top_level.vhd}
 }
@@ -95,6 +101,8 @@ read_xdc {{C:/Users/Bruno/Documents/ENSEIRB/S7/Projet VHDL/thermohygro/thermohyg
 set_property used_in_implementation false [get_files {{C:/Users/Bruno/Documents/ENSEIRB/S7/Projet VHDL/thermohygro/thermohygro/thermohygro.srcs/constrs_1/new/Nexys-4-DDR-Master.xdc}}]
 
 set_param ips.enableIPCacheLiteLoad 1
+
+read_checkpoint -auto_incremental -incremental {C:/Users/Bruno/Documents/ENSEIRB/S7/Projet VHDL/thermohygro/thermohygro/thermohygro.srcs/utils_1/imports/synth_1/top_level.dcp}
 close [open __synthesis_is_running__ w]
 
 OPTRACE "synth_design" START { }

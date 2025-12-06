@@ -36,7 +36,6 @@ BEGIN
             column <= 0;
             row <= 0;
             ADDR_REG <= 0;
-            pix_write <= '0';
         else
             if row < 63 and column = 95 then 
                 row <= row + 1;
