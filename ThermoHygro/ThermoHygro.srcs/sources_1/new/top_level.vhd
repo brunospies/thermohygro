@@ -16,7 +16,19 @@ entity top_level is
         PMOD_EN     : out   STD_LOGIC;
         
         HYGRO_SCL   : inout STD_LOGIC;
-        HYGRO_SDA   : inout STD_LOGIC 
+        HYGRO_SDA   : inout STD_LOGIC; 
+        
+        SPI_MISO    : in  std_logic;
+        
+        SPI_SS      : out std_logic;
+        SPI_SCK     : out std_logic;
+        LED         : out std_logic_vector(15 downto 0);
+        LED16_B     : out std_logic;
+        LED16_G     : out std_logic;
+        LED16_R     : out std_logic;
+        LED17_B     : out std_logic;
+        LED17_G     : out std_logic;
+        LED17_R     : out std_logic
      );
 end top_level;
 
@@ -116,18 +128,28 @@ architecture Behavioral of top_level is
     
     component top_pmod_hygro is
         Port(
-            clk :  in std_logic;
-            reset: in std_logic;
-            temp : out std_logic_vector(10 downto 0);
-            hygro : out std_logic_vector(7 downto 0);
+            clk      :  in std_logic;
+            reset    : in std_logic;
+            temp     : out std_logic_vector(10 downto 0);
+            hygro    : out std_logic_vector(7 downto 0);
             ack_error: out std_logic;
-            hygro_scl : INOUT STD_LOGIC;
-            hygro_sda : INOUT STD_LOGIC
+            hygro_scl: INOUT STD_LOGIC;
+            hygro_sda: INOUT STD_LOGIC
         );
     end component;
     
     signal TEMP  : STD_LOGIC_VECTOR(10 DOWNTO 0);
     signal HYGRO : STD_LOGIC_VECTOR( 7 DOWNTO 0);
+    
+    component top_luminosite is
+        Port(
+            clk, reset      : in std_logic;
+            spi_miso        : in std_logic;
+            spi_ss, spi_sck : out std_logic;
+            LED             : out std_logic_vector(15 downto 0);
+            LED16_B, LED16_G, LED16_R, LED17_B, LED17_G, LED17_R : out std_logic
+        );
+    end component;
 
 begin
     
@@ -212,6 +234,23 @@ begin
             hygro     => HYGRO,
             hygro_scl => HYGRO_SCL,
             hygro_sda => HYGRO_SDA
-        );  
+        );
+        
+    LUMINOSITE: top_luminosite
+        port map (
+            clk       => clk,
+            reset     => reset,
+            spi_miso  => SPI_MISO,
+            spi_ss    => SPI_SS, 
+            spi_sck   => SPI_SCK,
+            LED       => LED,
+            LED16_B   => LED16_B,
+            LED16_G   => LED16_G,
+            LED16_R   => LED16_R,
+            LED17_B   => LED17_B,
+            LED17_G   => LED17_G,
+            LED17_R   => LED17_R
+        );
+     
 
 end Behavioral;
